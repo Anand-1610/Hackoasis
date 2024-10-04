@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Language Model</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AI Language Model</div>
+        <ul class="nav-links">
+            <input type="checkbox" id="checkbox_toggle">
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+        </ul>
+    </nav>
+
+  <div class="container">
+    <h1>Welcome to Your Language Learning Journey</h1>
+    <h2>Choose a lesson based on your level:</h2>
+    
+    <!-- Adaptive Learning Path Section -->
+    <div class="lesson-path">
+      <button onclick="startLesson('beginner')">Beginner Lesson (Letters)</button>
+      <button onclick="startLesson('intermediate')">Intermediate Lesson (Words)</button>
+      <button onclick="startLesson('advanced')">Advanced Lesson (Sentences)</button>
+    </div>
+
+    <!-- Language Selection Section -->
+    <div class="language-selection">
+      <h2>Select Input and Output Languages</h2>
+      <select id="inputLanguage">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="bn">Bengali</option>
+      </select>
+      <select id="outputLanguage">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="bn">Bengali</option>
+          <option value="ru">Russian</option>
+          <option value="zh">Chinese</option>
+          <option value="ja">Japanese</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+      </select>
+      <button onclick="translateText()">Translate</button>
+    </div>
+
+    <!-- Translation Input Section -->
+    <div class="translation-input">
+      <input type="text" id="translationInput" placeholder="Enter text to translate">
+      <p id="translationOutput"></p>
+    </div>
+
+    <!-- Pronunciation Feedback Section -->
+    <div class="feedback-box">
+      <h2>Pronunciation Practice</h2>
+      <input type="text" id="pronunciationInput" placeholder="Type a word">
+      <button onclick="checkPronunciation()">Submit</button>
+      <button onclick="startDictation()">🎤 Speak</button>
+      <p id="pronunciationFeedback" class="feedback"></p>
+    </div>
+
+    <!-- Gamification Section -->
+    <div class="gamification">
+      <div class="points">Points: <span id="points">50</span></div>
+      <div class="badges">Badges: <span id="badges">None</span></div>
+    </div>
+
+    <!-- Leaderboard Section -->
+    <div class="leaderboard">
+      <h3>Leaderboard</h3>
+      <ul id="leaderboardList">
+        <li>Player 1: 150 points</li>
+        <li>Player 2: 110 points</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

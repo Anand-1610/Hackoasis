@@ -1,0 +1,199 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .navbar {
+      width: 100%;
+      background-color: #007bff;
+      padding: 5px;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+  }
+  
+  .navbar .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 10px;
+  }
+  
+  .nav-links {
+      list-style: none;
+      margin-right: 10px;
+  }
+  
+  .nav-links input[type="checkbox"] {
+      display: none;
+  }
+  
+  .nav-links .hamburger {
+      display: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+  }
+  
+  .nav-links .menu {
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin: 0 15px;
+  }
+  
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+  }
+  
+  .nav-links a:hover {
+      color: #f1c40f;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+      .nav-links .menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          background-color: #007bff;
+          border-top: 1px solid white;
+      }
+  
+      .nav-links .menu li {
+          text-align: center;
+          margin: 10px 0;
+      }
+  
+      .nav-links input:checked + .hamburger + .menu {
+          display: flex;
+      }
+  
+      .nav-links .hamburger {
+          display: block;
+      }
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  .lesson-path button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .lesson-path button:hover {
+    background-color: #45a049;
+  }
+  
+  .language-selection {
+    margin: 20px 0;
+  }
+  
+  .language-selection select {
+    padding: 10px;
+    margin: 0 10px;
+  }
+  
+  .translation-input {
+    margin-top: 20px;
+  }
+  
+  .translation-input input {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+  }
+  
+  .feedback-box {
+    margin-top: 30px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #007B9E;
+  }
+  
+  .gamification, .leaderboard {
+    margin-top: 20px;
+  }
+  
+  .points, .badges {
+    font-size: 18px;
+  }
+  
+  .leaderboard ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .leaderboard ul li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .lesson-path button {
+      width: 100%;
+      margin: 10px 0; /* Stack buttons */
+    }
+  
+    input[type="text"] {
+      width: calc(100% - 120px); /* Adjust width */
+    }
+  
+    button {
+      width: 100%; /* Full width for buttons */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px; /* Smaller font size for mobile */
+    }
+  
+    h2 {
+      font-size: 20px; /* Smaller font size for mobile */
+    }
+  }
+  
